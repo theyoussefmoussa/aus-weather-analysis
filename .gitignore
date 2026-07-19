@@ -1,5 +1,5 @@
 # Ignore datasets
-data/raw/*.csv
+data/
 
 # Python cache
 __pycache__/
