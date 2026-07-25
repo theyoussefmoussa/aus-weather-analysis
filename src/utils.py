@@ -1,6 +1,8 @@
 import os
 import matplotlib.pyplot as plt
 import sys
+
+import pandas as pd
 project_root = os.path.abspath("..")
 sys.path.insert(0, project_root)
 
@@ -20,14 +22,10 @@ HIST_COLOR = "#4C72B0"   # muted steel blue — used for all histograms
 BAR_COLOR = "#55A868"    # muted green — used for all categorical bar charts
 PIE_COLORS = ["#4C72B0", "#DD8452"]  # blue / orange — used for binary pie charts
 def set_labels(title, xlabel="", ylabel="Frequency"):
-    """Set title, xlabel, and ylabel for a matplotlib plot."""
-    title = title.title()
-    xlabel = xlabel.title()
     fontdict = {"fontsize": 12, "fontweight": "bold"}
     plt.title(title, fontdict=fontdict)
     plt.xlabel(xlabel, fontsize=12)
     plt.ylabel(ylabel, fontsize=12)
-
 
 
 def highlight_max_bar(ax):
@@ -44,3 +42,36 @@ def save_fig(fig, output_path):
     plt.tight_layout()
     fig.savefig(output_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
+
+
+
+
+rain_or_not_list = ['Rain Tomorrow', 'No Rain Tomorrow']
+NO_COLOR = "#4C72B0"   # blue — RainTomorrow = No
+YES_COLOR = "#DD8452"  # orange — RainTomorrow = Yes
+def violinplot(df, col):
+    col_will_rain = df.loc[df['RainTomorrow'], col].dropna()
+    col_no_rain = df.loc[~df['RainTomorrow'], col].dropna()
+    plt.violinplot([col_will_rain, col_no_rain], showmedians=True, showextrema=True)
+    plt.xticks([1, 2], rain_or_not_list)
+    set_labels(f"{col} vs Rain Tomorrow", ylabel=col)
+    plt.grid()
+
+
+def crosstab_barchart(df, categorical_column, bar_kind='bar', figsize=(8, 6)):
+    crosstab_result = pd.crosstab(
+        index=df[categorical_column], 
+        columns=df['RainTomorrow'], 
+        normalize='index'
+        )
+    ax = crosstab_result.plot(
+        kind=bar_kind,  # type: ignore
+        stacked=True, 
+        color=[NO_COLOR, YES_COLOR], 
+        figsize=figsize
+        )
+    set_labels(f"{categorical_column} vs RainTomorrow (Proportion)", xlabel=categorical_column, ylabel="Proportion")
+    plt.xticks(rotation=45)
+    plt.legend(title="Rain Tomorrow", labels=['No', 'Yes'])
+    plt.tight_layout()
+    return ax.get_figure()
