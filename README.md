@@ -21,8 +21,9 @@ Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 | Problem Definition | Done | Mohamed Farag |
 | Data Understanding | Done | Mohamed Farag |
 | Data Cleaning | Done | Youssef Moussa |
-| Exploratory Data Analysis (Univariate Analysis) | In Progress | Youssef Moussa |
-| Bivariate Analysis | Not Started | Youssef Moussa |
+| Exploratory Data Analysis (Univariate Analysis) | Done | Youssef Moussa |
+| Bivariate Analysis | In Progress | Youssef Moussa |
+| Preprocessing | Not Started | Mohamed Farag |
 ---
 
 ## Project Structure
@@ -42,8 +43,8 @@ my-project/
 │   └── 01_problem_definition.ipynb
 │   └── 02_data_understanding.ipynb
 │   └── 03_data_cleaning.ipynb
-│   └── 04_data_preprocessing.ipynb
-│   └── 05_feature_engineering.ipynb
+│   └── 04_univariate_analysis.ipynb
+│   └── 05_bivariate_analysis.ipynb
 │   └── 06_modeling.ipynb
 │   └── 07_evaluation.ipynb
 ├── src/
@@ -52,11 +53,13 @@ my-project/
 │   ├── feature_engineering.py
 │   ├── data_cleaning.py
 │   ├── univariate_analysis.py
+│   ├── bivariate_analysis.py
 │   └── train.py
 │   └── utils.py
 ├── models/
 ├── outputs/
 │   ├── univariate_analysis/
+│   ├── bivariate_analysis/
 ├── .env
 ├── .gitignore
 ├── requirements.txt
