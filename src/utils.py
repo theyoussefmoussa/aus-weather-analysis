@@ -79,7 +79,7 @@ def crosstab_barchart(df, categorical_column, bar_kind='bar', figsize=(8, 6)):
 
 def save_dataset(df, output_path, name, file_extension='parquet'):
     saving_path = f"{output_path}/{name}.{file_extension}"
-    if name in ('y_train', 'y_test'):
+    if isinstance(df, pd.Series):
         df = df.to_frame()
     if file_extension == "parquet":
         df.to_parquet(saving_path)
