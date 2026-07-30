@@ -9,11 +9,11 @@ import sys
 project_root = os.path.abspath("..")
 sys.path.insert(0, project_root)
 
-def preprocessing():
+def data_preprocessing():
     # Loading Data
     load_dotenv()
     BASE_PATH = os.getenv("BASE_PATH")
-    OUTPUT_PATH = f"{BASE_PATH}/data/final/"
+    OUTPUT_PATH = f"{BASE_PATH}/data/processed/"
 
     df = pd.read_parquet(
         f"{BASE_PATH}/data/processed/clean_weather_training_data.parquet"
@@ -81,7 +81,7 @@ def preprocessing():
     print("X_test :", X_test.shape)
     print("y_train:", y_train.shape)
     print("y_test :", y_test.shape)
-    print("Proccessed Dataset Saved Successfully in data/final")
+    print("Proccessed Dataset Saved Successfully in data/processed")
 
 if __name__ == "__main__":
-    preprocessing()
+    data_preprocessing()
