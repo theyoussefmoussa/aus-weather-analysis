@@ -75,3 +75,11 @@ def crosstab_barchart(df, categorical_column, bar_kind='bar', figsize=(8, 6)):
     plt.legend(title="Rain Tomorrow", labels=['No', 'Yes'])
     plt.tight_layout()
     return ax.get_figure()
+
+
+def save_dataset(df, output_path, name, file_extension='parquet'):
+    saving_path = f"{output_path}/{name}.{file_extension}"
+    if name in ('y_train', 'y_test'):
+        df = df.to_frame()
+    if file_extension == "parquet":
+        df.to_parquet(saving_path)
