@@ -1,6 +1,6 @@
 # Australia Weather Analysis
 
-Predicting next-day rainfall in Australia using historical weather data — a Classification project (Rain Tomorrow: Yes/No).
+Predicting next-day rainfall in Australia using historical weather data - a Classification project (Rain Tomorrow: Yes/No).
 
 Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 
@@ -18,15 +18,15 @@ Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 
 | Phase | Status | Done By |
 |------|:------:|------|
-| Problem Definition | ✅ Done | Mohamed Farag |
-| Data Understanding | ✅ Done | Mohamed Farag |
-| Data Cleaning | ✅ Done | Youssef Moussa |
-| Exploratory Data Analysis (Univariate Analysis) | ✅ Done | Youssef Moussa |
-| Bivariate Analysis | ✅ Done | Youssef Moussa |
-| Data Preprocessing | ✅ Done | Mohamed Farag |
-| Feature Engineering | ✅ Done | Mohamed Farag |
-| Modeling | ⏳ In Progress | Mohamed Farag & Youssef Moussa |
-| Evaluation | ⏳ Not Started | Mohamed Farag & Youssef Moussa |
+| Problem Definition | Done | Mohamed Farag |
+| Data Understanding | Done | Mohamed Farag |
+| Data Cleaning | Done | Youssef Moussa |
+| Exploratory Data Analysis (Univariate Analysis) | Done | Youssef Moussa |
+| Bivariate Analysis | Done | Youssef Moussa |
+| Data Preprocessing | Done | Mohamed Farag |
+| Feature Engineering | Done | Mohamed Farag |
+| Modeling | In Progress | Mohamed Farag & Youssef Moussa |
+| Evaluation | Not Started | Mohamed Farag & Youssef Moussa |
 
 ---
 
@@ -44,7 +44,7 @@ my-project/
 │   ├── data_cleaning.md
 │   ├── univariate_analysis.md
 │   ├── bivariate_analysis.md
-│   ├── preprocessing.md
+│   ├── data_preprocessing.md
 │   └── feature_engineering.md
 ├── notebooks/
 │   ├── 01_problem_definition.ipynb
@@ -52,7 +52,7 @@ my-project/
 │   ├── 03_data_cleaning.ipynb
 │   ├── 04_univariate_analysis.ipynb
 │   ├── 05_bivariate_analysis.ipynb
-│   ├── 06_preprocessing.ipynb
+│   ├── 06_data_preprocessing.ipynb
 │   ├── 07_feature_engineering.ipynb
 │   ├── 08_modeling.ipynb
 │   └── 09_evaluation.ipynb
@@ -101,10 +101,11 @@ Set up your environment variables (create a `.env` file):
 BASE_PATH=/path/to/your/data
 ```
 
-Run the notebooks in order (`01` → `07`) inside `notebooks/`, or run the full pipeline:
+Run the full pipeline:
 
 ```bash
 python main.py
+python3 main.py # if you are linux user like me
 ```
 
 ---
