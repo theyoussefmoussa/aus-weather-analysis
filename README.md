@@ -1,6 +1,6 @@
 # Australia Weather Analysis
 
-Predicting next-day rainfall in Australia using historical weather data — a Classification project (Rain Tomorrow: Yes/No).
+Predicting next-day rainfall in Australia using historical weather data - a Classification project (Rain Tomorrow: Yes/No).
 
 Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 
@@ -17,13 +17,17 @@ Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 ## Project Phases
 
 | Phase | Status | Done By |
-|------|----:|------|
+|------|:------:|------|
 | Problem Definition | Done | Mohamed Farag |
 | Data Understanding | Done | Mohamed Farag |
 | Data Cleaning | Done | Youssef Moussa |
 | Exploratory Data Analysis (Univariate Analysis) | Done | Youssef Moussa |
-| Bivariate Analysis | In Progress | Youssef Moussa |
-| Preprocessing | Not Started | Mohamed Farag |
+| Bivariate Analysis | Done | Youssef Moussa |
+| Data Preprocessing | Done | Mohamed Farag |
+| Feature Engineering | Done | Mohamed Farag |
+| Modeling | In Progress | Mohamed Farag & Youssef Moussa |
+| Evaluation | Not Started | Mohamed Farag & Youssef Moussa |
+
 ---
 
 ## Project Structure
@@ -32,34 +36,41 @@ Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 my-project/
 ├── data/
 │   ├── raw/
-│   └── processed/
+│   ├── processed/
 │   └── final/
 ├── docs/
-│   └── data_understanding.md
-│   └── problem_definition.md
-│   └── data_cleaning.md
-│   └── univariate_analysis.md
+│   ├── problem_definition.md
+│   ├── data_understanding.md
+│   ├── data_cleaning.md
+│   ├── univariate_analysis.md
+│   ├── bivariate_analysis.md
+│   ├── data_preprocessing.md
+│   └── feature_engineering.md
 ├── notebooks/
-│   └── 01_problem_definition.ipynb
-│   └── 02_data_understanding.ipynb
-│   └── 03_data_cleaning.ipynb
-│   └── 04_univariate_analysis.ipynb
-│   └── 05_bivariate_analysis.ipynb
-│   └── 06_modeling.ipynb
-│   └── 07_evaluation.ipynb
+│   ├── 01_problem_definition.ipynb
+│   ├── 02_data_understanding.ipynb
+│   ├── 03_data_cleaning.ipynb
+│   ├── 04_univariate_analysis.ipynb
+│   ├── 05_bivariate_analysis.ipynb
+│   ├── 06_data_preprocessing.ipynb
+│   ├── 07_feature_engineering.ipynb
+│   ├── 08_modeling.ipynb
+│   └── 09_evaluation.ipynb
 ├── src/
 │   ├── __init__.py
-│   ├── evaluate.py
-│   ├── feature_engineering.py
 │   ├── data_cleaning.py
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
 │   ├── univariate_analysis.py
 │   ├── bivariate_analysis.py
-│   └── train.py
+│   ├── train.py
+│   ├── evaluate.py
 │   └── utils.py
 ├── models/
 ├── outputs/
 │   ├── univariate_analysis/
 │   ├── bivariate_analysis/
+│   └── figures/
 ├── .env
 ├── .gitignore
 ├── requirements.txt
@@ -90,10 +101,11 @@ Set up your environment variables (create a `.env` file):
 BASE_PATH=/path/to/your/data
 ```
 
-Run the notebooks in order (`01` → `07`) inside `notebooks/`, or run the full pipeline:
+Run the full pipeline:
 
 ```bash
 python main.py
+python3 main.py # if you are linux user like me
 ```
 
 ---
