@@ -4,6 +4,7 @@ from src.univariate_analysis import univariate_analysis
 from src.bivariate_analysis import bivariate_analysis
 from src.data_preprocessing import data_preprocessing
 from src.feature_engineering import feature_engineering
+from src.model import train_model
 if __name__ == "__main__": 
     print("Starting Phases")
     separator(title="Data Cleaning")
@@ -16,3 +17,5 @@ if __name__ == "__main__":
     data_preprocessing()
     separator(title="Feature Engineering")
     feature_engineering()
+    separator(title="Model Training")
+    train_model()

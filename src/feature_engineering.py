@@ -52,9 +52,9 @@ def feature_engineering():
     X_train = add_features(X_train)
     X_test = add_features(X_test)
 
-    print(f"{X_train.memory_usage(deep=True).sum() / 1e6:.1f} MB")
-    print(X_train.shape)
-    print(X_test.shape)
+    print(f"Memory Usage: {X_train.memory_usage(deep=True).sum() / 1e6:.1f} MB")
+    print(f"X_train Shape: {X_train.shape}")
+    print(f"X_test Shape: {X_test.shape}")
 
     saved_datasets = {
         "X_train_final": X_train,
