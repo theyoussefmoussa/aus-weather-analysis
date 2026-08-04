@@ -67,6 +67,8 @@ my-project/
 │   ├── train.py
 │   ├── train_model.py
 │   ├── tune_model.py
+│   ├── train_final_model.py
+│   ├── compare_models.py
 │   ├── evaluate.py
 │   └── utils.py
 ├── models/
