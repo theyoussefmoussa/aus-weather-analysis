@@ -25,7 +25,7 @@ Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 | Bivariate Analysis | Done | Youssef Moussa |
 | Data Preprocessing | Done | Mohamed Farag |
 | Feature Engineering | Done | Mohamed Farag |
-| Modeling | In Progress | Mohamed Farag & Youssef Moussa |
+| Modeling | In Progress | Youssef Moussa |
 | Evaluation | Not Started | Mohamed Farag & Youssef Moussa |
 
 ---
@@ -46,6 +46,7 @@ my-project/
 │   ├── bivariate_analysis.md
 │   ├── data_preprocessing.md
 │   └── feature_engineering.md
+│   └── model_train.md
 ├── notebooks/
 │   ├── 01_problem_definition.ipynb
 │   ├── 02_data_understanding.ipynb
@@ -64,6 +65,10 @@ my-project/
 │   ├── univariate_analysis.py
 │   ├── bivariate_analysis.py
 │   ├── train.py
+│   ├── train_model.py
+│   ├── tune_model.py
+│   ├── train_final_model.py
+│   ├── compare_models.py
 │   ├── evaluate.py
 │   └── utils.py
 ├── models/
@@ -105,7 +110,7 @@ Run the full pipeline:
 
 ```bash
 python main.py
-python3 main.py # if you are linux user like me
+python3 main.py # if you are linux user like Moussa
 ```
 
 ---
