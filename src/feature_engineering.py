@@ -41,6 +41,7 @@ def add_features(df):
 
 def feature_engineering():
     # Load Data
+    load_dotenv()
     BASE_PATH = os.getenv("BASE_PATH")
     OUTPUT_PATH = f"{BASE_PATH}/data/final"
 

@@ -1,17 +1,19 @@
-# Ignore datasets
+# Datasets
 data/
 
 # Python cache
 __pycache__/
 *.pyc
 
-# Jupyter checkpoints
+# Jupyter
 .ipynb_checkpoints/
 
-# Environment
+# Environment variables
 .env
 
-# Virtual Environment
+# Virtual environments
 venv/
+.venv/
 
+# VS Code
 .vscode/
