@@ -1,14 +1,13 @@
-import os
 import joblib
 import pandas as pd
-from dotenv import load_dotenv
+from pathlib import Path
 
 
-load_dotenv()
+# Project root directory
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-BASE_PATH = os.getenv("BASE_PATH")
-
-MODEL_PATH = f"{BASE_PATH}/models/lgbm_tuned.pkl"
+# Path to the trained model
+MODEL_PATH = PROJECT_ROOT / "models" / "lgbm_tuned.pkl"
 
 
 # Load trained model once
@@ -112,7 +111,7 @@ def predict_weather(input_data):
         if feature not in df.columns:
             df[feature] = 0
 
-    # Remove unexpected columns
+    # Remove unexpected columns and keep the exact model feature order
     df = df[MODEL_FEATURES]
 
     # Predict probability
