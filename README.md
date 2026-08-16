@@ -18,10 +18,68 @@ Collaborating with [Mohamed Farag](https://github.com/themohamedfarag)
 
 | Phase | Done By |
 |---|---|
-| Problem Definition, Data Understanding, Feature Engineering, Evaluation, Deployment | Mohamed Farag |
-| Data Cleaning, EDA, Preprocessing, Modeling | Youssef Moussa |
+| Problem Definition, Data Understanding, Preprocessing, Feature Engineering, Evaluation, Deployment | Mohamed Farag |
+| Data Cleaning, EDA, Modeling | Youssef Moussa |
 
 Full pipeline: `data/` → `notebooks/` → `src/` → `models/` → `app/app.py`
+
+---
+
+## Project Structure
+
+```text
+aus-weather-analysis/
+├── app/
+│   └── app.py
+├── docs/
+│   ├── problem_definition.md
+│   ├── data_understanding.md
+│   ├── data_cleaning.md
+│   ├── univariate_analysis.md
+│   ├── bivariate_analysis.md
+│   ├── data_preprocessing.md
+│   ├── feature_engineering.md
+│   ├── model_train.md
+│   └── evaluation.md
+├── models/
+│   ├── lgbm_baseline.pkl
+│   └── lgbm_tuned.pkl
+├── notebooks/
+│   ├── 01_problem_definition.ipynb
+│   ├── 02_data_understanding.ipynb
+│   ├── 03_data_cleaning.ipynb
+│   ├── 04_univariate_analysis.ipynb
+│   ├── 05_bivariate_analysis.ipynb
+│   ├── 06_data_preprocessing.ipynb
+│   ├── 07_feature_engineering.ipynb
+│   ├── 08_modeling.ipynb
+│   └── 09_evaluation.ipynb
+├── outputs/
+│   ├── univariate_analysis/
+│   └── bivariate_analysis/
+├── src/
+│   ├── __init__.py
+│   ├── data_cleaning.py
+│   ├── univariate_analysis.py
+│   ├── bivariate_analysis.py
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── train_model.py
+│   ├── tune_model.py
+│   ├── train_final_model.py
+│   ├── compare_models.py
+│   ├── evaluate.py
+│   ├── predict.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── constants.py
+│       └── plotting.py
+├── .gitignore
+├── main.py
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
 
 ---
 
